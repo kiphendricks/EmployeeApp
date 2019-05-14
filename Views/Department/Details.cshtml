@@ -1,0 +1,60 @@
+@model EmployeeApp.Models.DepartmentModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Department Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Email Address
+                </th>
+                <th>
+                    Phone Number
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model.Employees) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>    
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DepartmentId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
