@@ -15,8 +15,8 @@
 
 * Add validation to ensure data integrity of user input and data model.
     * Enforce Email & phone formatting.
-* Enforce required fields as appropriate.
-    * Add unit and integration testing.
-    * Update app formatting.
-* Use properly formatted field labels and column headers ('FirstName' -> 'First Name')
-    * Add or remove privacy policy.
+    * Enforce required fields as appropriate.
+* Add unit and integration testing.
+* Update app formatting.
+    * Use properly formatted field labels and column headers ('FirstName' -> 'First Name')
+* Add or remove privacy policy.
